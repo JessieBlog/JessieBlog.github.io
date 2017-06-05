@@ -1,0 +1,697 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="变量的命名规则三个必须  必须以字母或者下划线开头 必须不包含隔空嵌入的空格和符号 必须不是C#关键字  变量的使用规则必须先定义再赋值后使用。  title: Console类的使用Console 方法Console.Write//表示向控制台直接写入字符串，不进行换行，可继续接着前面的字符写入。Console.WriteLine(“要输出的内容”)//表示向控制台写入字符串后换行。Consol">
+<meta property="og:type" content="article">
+<meta property="og:title" content="变量">
+<meta property="og:url" content="http://yoursite.com/2017/05/30/变量/index.html">
+<meta property="og:site_name" content="Jessie Blog">
+<meta property="og:description" content="变量的命名规则三个必须  必须以字母或者下划线开头 必须不包含隔空嵌入的空格和符号 必须不是C#关键字  变量的使用规则必须先定义再赋值后使用。  title: Console类的使用Console 方法Console.Write//表示向控制台直接写入字符串，不进行换行，可继续接着前面的字符写入。Console.WriteLine(“要输出的内容”)//表示向控制台写入字符串后换行。Consol">
+<meta property="og:updated_time" content="2017-06-01T13:10:59.169Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="变量">
+<meta name="twitter:description" content="变量的命名规则三个必须  必须以字母或者下划线开头 必须不包含隔空嵌入的空格和符号 必须不是C#关键字  变量的使用规则必须先定义再赋值后使用。  title: Console类的使用Console 方法Console.Write//表示向控制台直接写入字符串，不进行换行，可继续接着前面的字符写入。Console.WriteLine(“要输出的内容”)//表示向控制台写入字符串后换行。Consol">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/30/变量/"/>
+
+
+
+
+
+  <title>变量 | Jessie Blog</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jessie Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">这是秋的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/30/变量/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jessie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jessie Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">变量</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-30T21:14:00+08:00">
+                2017-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="变量的命名规则"><a href="#变量的命名规则" class="headerlink" title="变量的命名规则"></a>变量的命名规则</h4><p>三个必须</p>
+<ol>
+<li>必须以字母或者下划线开头</li>
+<li>必须不包含隔空嵌入的空格和符号</li>
+<li>必须不是C#关键字</li>
+</ol>
+<h4 id="变量的使用规则"><a href="#变量的使用规则" class="headerlink" title="变量的使用规则"></a>变量的使用规则</h4><p>必须先定义再赋值后使用。</p>
+<hr>
+<h2 id="title-Console类的使用"><a href="#title-Console类的使用" class="headerlink" title="title: Console类的使用"></a>title: Console类的使用</h2><h4 id="Console-方法"><a href="#Console-方法" class="headerlink" title="Console 方法"></a>Console 方法</h4><p>Console.Write//表示向控制台直接写入字符串，不进行换行，可继续接着前面的字符写入。<br>Console.WriteLine(“要输出的内容”)//表示向控制台写入字符串后换行。<br>Console.Read 表示从控制台读取字符串，不换行。<br>Console.ReadLine//表示从控制台读取字符串后进行换行。<br>Console.Beep 方法 通过控制台扬声器播放提示音。<br>nsole.Clear 方法 清除控制台缓冲区和相应的控制台窗口的显示信息。</p>
+<ul>
+<li>输出到控制台</li>
+</ul>
+<p>输出到控制台就是把数据输出到控制台并显示出来。</p>
+<p>.Net框架提供了console类实现这个任务，输出方式如下：<br>Console.WriteLine();<br>Console.Write();<br>Console.WriteLine(输出的值);<br>Console.Write(输出的值);<br>Console.WriteLine(“输出的格式字符串”,变量列表);<br>Console.Write(“输出的格式字符串”,变量列表);<br>Console.WrietLine()和Console.Write()的唯一却别就是前者输出后换行，后者不换行。</p>
+<p>####从控制台输入</p>
+<p>Console类提供的输入方法：</p>
+<p>Console.ReadLine();<br>这一句代码返回一个字符串型数据，可以把它直接赋值给字符串变量，如：<br>string strname=Console.ReadLine();<br>有时需要从控制台输入数字，就用到前面介绍的内容，数据转换，如：<br>int num=int.Pares(Console.ReadLine());<br>int num=Convert.ToInt32(Console.ReadLine());<br>上面两句代码效果相同，可以根据自己的习惯选择任意一种。</p>
+<p>注意：   </p>
+<p> Console.ReadLine()和Console.Read()的输入结果完全不同，不能混用。<br> Console.Read(),返回值为首字符的ASCII码<br> Console.ReadLine(),返回值为字符串<br>也就是说read方法只能读取第一个字符，而ReadLine能读多个字符也可以换行读取 </p>
+<ul>
+<li>格式话字符串输出</li>
+</ul>
+<p>格式话字符串：含有占位符的字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span><span class="params">(string[] args)</span><span class="comment">//方法</span></span></div><div class="line">        &#123;</div><div class="line">            string stname =<span class="string">" xiaofei"</span>;</div><div class="line">            <span class="keyword">int</span> age = <span class="number">20</span>;</div><div class="line">            <span class="keyword">int</span> banji=<span class="number">2013</span>;</div><div class="line">            Console.WriteLine(<span class="string">"学员姓名:"</span>+stname +<span class="string">" 年龄:"</span>+age+<span class="string">" 班级:"</span>+banji );</div><div class="line">        &#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span><span class="params">(string[] args)</span><span class="comment">//方法</span></span></div><div class="line">        &#123;</div><div class="line">            string stname =<span class="string">" xiaofei"</span>;</div><div class="line">            <span class="keyword">int</span> age = <span class="number">20</span>;</div><div class="line">            <span class="keyword">int</span> banji=<span class="number">2013</span>;</div><div class="line">            Console.WriteLine(<span class="string">"学员姓名:&#123;0&#125;"</span><span class="string">" 年龄:&#123;1&#125;"</span><span class="string">" 班级:&#123;2&#125;"</span>,stname,age,banji);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p>![加载错误]<br>(<a href="https://coding.net/u/JessieBlog/p/JessieBlog/git/raw/master/image/9.png" target="_blank" rel="external">https://coding.net/u/JessieBlog/p/JessieBlog/git/raw/master/image/9.png</a>)</p>
+<p>   Console.WriteLine(“请输入学员姓名：”);<br>           string stname = Console.ReadLine();<br>           Console.WriteLine(“ 请输入学院年龄：”);<br>           int age = int.Parse(Console .ReadLine ());<br>           Console.WriteLine(“请输入学院班级：”);<br>           string banji=Console .ReadLine ();<br>           Console.WriteLine(“姓名\t年龄\t班级”);<br>           Console.WriteLine(“{0}\t{1}\t{2}”, stname, age, banji);</p>
+<p>![加载错误]<br>(<a href="https://coding.net/u/JessieBlog/p/JessieBlog/git/raw/master/image/10.png" target="_blank" rel="external">https://coding.net/u/JessieBlog/p/JessieBlog/git/raw/master/image/10.png</a>)</p>
+<p>Console.ReadKey()的作用，read是从控制台读取，key表示按下键盘，那么组合在一起的意思就是获取用户按下功能键显示在窗口中，用在前面的代码起到窗口暂停的功能，在调试状态下，只有按下任意键后窗口才会关闭。</p>
+<p>控制台输入输出</p>
+<p>代码如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using System.Collection.Generic;</div><div class="line">using System.Linq;</div><div class="line">using System.Text;</div><div class="line">namespace ConsoleTest</div><div class="line">&#123;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConsoleTest</span></span></div><div class="line">&#123;</div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span><span class="params">(string[] args)</span></span></div><div class="line">&#123;</div><div class="line">Console.WriteLine(<span class="string">"请输入两个学生的名字"</span>);</div><div class="line">string name1=Console.ReadLine();</div><div class="line">string name2=Console.ReadLine();</div><div class="line">Console.WriteLine(<span class="string">"请输入两个学生的成绩"</span>);</div><div class="line"><span class="keyword">int</span> score1=<span class="keyword">int</span>.Parse(Console.ReadLine());</div><div class="line"><span class="keyword">int</span> score2=<span class="keyword">int</span>.Parse(Console.ReadLine());</div><div class="line">Console.WriteLine(<span class="string">"第一个学生的姓名&#123;0&#125;,成绩&#123;1&#125;"</span>,name1,score1);</div><div class="line">Console.WriteLine(<span class="string">"第二个学生的姓名&#123;0&#125;,成绩&#123;1&#125;"</span>,name2,score2);</div><div class="line">Console.ReadKey();</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/29/基本语法/" rel="next" title="基本语法">
+                <i class="fa fa-chevron-left"></i> 基本语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/01/运算符/" rel="prev" title="C#运算符">
+                C#运算符 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Jessie" />
+          <p class="site-author-name" itemprop="name">Jessie</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的命名规则"><span class="nav-number">1.</span> <span class="nav-text">变量的命名规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的使用规则"><span class="nav-number">2.</span> <span class="nav-text">变量的使用规则</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#title-Console类的使用"><span class="nav-number"></span> <span class="nav-text">title: Console类的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Console-方法"><span class="nav-number">1.</span> <span class="nav-text">Console 方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jessie</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
